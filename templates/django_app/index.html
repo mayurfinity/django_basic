@@ -1,0 +1,38 @@
+{% extends 'django_app/base.html' %} 
+{% block body_block %}
+        <table id="example" class="display" style="width:100%" border=5>
+        <thead>
+            <tr>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>birthdate</th>
+                <th>Phoneno</th>
+                <th>Gender</th>
+                <th>File</th>
+                <th>Image</th>
+
+            </tr>
+        </thead>
+             {% for acc in studuser %}
+                <tr>
+                    <td>{{acc.firstname}}</td>
+                    <td>{{acc.lastname}}</td>
+                    
+                    <td>{{acc.email}}</td>
+                    <td>{{acc.address}}</td>
+
+                    <td>{{acc.birthdate}}</td>
+                    <td>{{acc.phoneno}}</td>
+
+                    <td>{{acc.gender}}</td>
+                    <td>{{acc.file}}</td>
+                    <td>{{acc.image}}</td>
+                    
+                </tr>
+            {% endfor %}
+    </table>
+ 
+ 
+    {% endblock  %}
