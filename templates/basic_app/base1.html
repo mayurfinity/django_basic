@@ -1,0 +1,24 @@
+{% extends 'basic_app/base.html' %}
+{% block body_block %}
+        <table id="example" class="display" style="width:100%" border=5>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email_address</th>
+                <th>date_join</th>
+                <th>last_ligin</th>
+            </tr>
+        </thead>
+             {% for acc in custuser %}
+                <tr>
+                    <td>{{acc.username}}</td>
+                    <td>{{acc.email}}</td>
+                    
+                    <td>{{acc.date_joined}}</td>
+                    <td>{{acc.last_login}}</td>
+                </tr>
+            {% endfor %}
+    </table>
+
+
+    {% endblock  %}

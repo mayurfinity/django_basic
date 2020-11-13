@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 {% load static %}
   <head>
@@ -29,6 +30,11 @@
     <input type="password" class="form-control" id="password" name='password'>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  
+  <a class= 'navbar-link' href ="{% url 'basic_app:register' %}">
+  
+  <button type="button" class="btn btn-primary">register</button>
+  </a>
 </form>
 
     <!-- Optional JavaScript; choose one of the two! -->
